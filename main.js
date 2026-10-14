@@ -71,3 +71,11 @@ const updateDots = () => {
         }
     });
 };
+
+dots.addEventListener("click", (event) => { 
+    const dotItem = event.target.closest("span");
+    if (!dotItem) return;
+    currentIndex = Number(dotItem.id);
+    updateSlider();
+  updateDots();
+});
